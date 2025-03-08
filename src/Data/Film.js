@@ -10,7 +10,7 @@ export const films=
     "Director": "Peter Jackson",
     "Writer": "Peter Jackson",
     "Actors": "Mark Kermode, Peter Jackson",
-    "Plot": "A documentary about World War I with never-before-seen footage to commemorate the centennial of the end of the war.",
+    "Plot": "Through ground breaking computer restoration technology, filmmaker Peter Jackson's team creates a moving real-to-life depiction of the WWI, as never seen before in restored, vivid colorizing & retiming of the film frames, in order to honor those who fought and more accurately depict this historical moment in world history.",
     "Language": "English",
     "Country": "UK, New Zealand",
     "Awards": "Nominated for 1 BAFTA Film Award. Another 4 wins & 10 nominations.",

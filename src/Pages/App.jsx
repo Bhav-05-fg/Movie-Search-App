@@ -3,6 +3,7 @@ import { films } from "../Data/Film.js";
 import Navbar from "../Components/Navbar.jsx"
 import Card from "../Components/Card.jsx"
 import axios from 'axios';
+import { Link } from 'react-router';
 
 
 function App() {
@@ -23,7 +24,9 @@ function App() {
       <Navbar handelSearch={handelSearch} searchRef={searchRef} />
       <div className="grid grid-cols-5 m-20">
         {films.map((film,index)=>{return(
-          <Card key={index} film={film}/>
+          <Link to="/movie">
+            <Card  key={index} film={film}/>
+          </Link>
         )
         })}
       </div>
