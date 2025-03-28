@@ -1,18 +1,27 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router";
 
+function SearchResult({ data, saveSearch, handleRecent }) {
+  const [search, setSearch] = useState([]);
 
-function SearchResult({ height,data,list}){
+  useEffect(() => {
+    if (data && data.Search) {
+      setSearch(data.Search);
+    }
+  }, [data]);
 
-  return(
-    <div className={` flex flex-row transition-all duration-300 ease-in-out absolute top-5  bg-neutral-100 h-${height} w-120 rounded-b-2xl pt-8 -z-10`}>
-      <Link to={`/movie-search/${data.imdbID}`} >
-        <div className="ml-5 mr-5 mb-5 flex">
-          <img src={data.Poster} alt={data.Title}  className="h-40 w-30 object-cover mr-3"/>
-          <h3>{data.Title}</h3>
-        </div>
-      </Link>
+  return (
+    <div className="flex flex-col transition-all duration-500 no-scroll ease-in-out absolute overflow-scroll top-5 bg-neutral-100 h-120 w-[50vw] rounded-b-2xl pt-8 -z-10">
+      {search.map((movie) => (
+        <Link key={movie.imdbID} to={`/movie-search/${movie.imdbID}`} onClick={()=>{saveSearch(),handleRecent(movie.imdbID)}}>
+          <div className="ml-5 mr-5 mb-5 flex">
+            <img src={movie.Poster} alt={movie.Title} className="h-40 w-30 object-cover mr-3 border-0" />
+            <h3>{movie.Title}</h3>
+          </div>
+        </Link>
+      ))}
     </div>
-  )
+  );
 }
 
 export default SearchResult;

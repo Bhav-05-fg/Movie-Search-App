@@ -3,9 +3,14 @@
 *{
   font-family: Poppins,Arial, Helvetica, sans-serif;
 }
-.border-nav{
-  border-bottom: 1px solid rgb(63, 63, 63);
+html{
+  scrollbar-width: none;
+
+}
+.no-scroll{
+  scrollbar-width: none;
 }
 body{
   background-color: rgb(24, 24, 24);
+  padding-top: 100px;
 }
