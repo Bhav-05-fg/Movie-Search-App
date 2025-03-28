@@ -60,12 +60,10 @@ function App() {
   }
 
   return (
-    <Router basename="/Movie-Search-App">
       <Routes>
         <Route path="/" element={<Home films={films} handleRecent={handleRecent} showRecent={showRecent} recentViewed={recentViewed}/>} />
         <Route path="/movie-search/:id" element={<MovieSearch />} />
       </Routes>
-    </Router>
   );
 }
 
